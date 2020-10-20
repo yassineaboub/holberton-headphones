@@ -1,0 +1,529 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75ne-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100ne-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+:root {
+    --color-primary: #D73953;
+    --color-black:  #090909;
+    --color-white: #ffffff;
+    --color-grey: #a0a0a0;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --color-red: #cd3e65;
+  
+    --text-color: var(--color-black);
+    --valid-color: var(--color-green);
+    --error-color: var(--color-red);
+  
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+  
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+  
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+  
+    /** SECTION **/
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-header-align: center;
+    --section-title-font-size: var(--font-size-xx-large);
+    --section-title-font-weight: var(--font-weight-bold);
+    --section-title-line-height: var(--line-height-small);
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+    --section-tagline-transform: uppercase;
+    --section-tagline-color: var(--color-primary);
+    --section-tagline-font-family: var(--font-family-headings);
+    --section-tagline-font-weight: var(--font-weight-bold);
+    --section-tagline-margin: 0;
+    --section-body-padding: 2rem 0 4rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+  
+    /** HEADER **/
+    --header-padding: 4rem 0 0;
+  
+    /** FOOTER **/
+    --footer-padding: 5rem 0 1rem;
+}
+html{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    background: url(images/headphones_hero_1.jpg);
+    background-size: 100% 100%;
+    position: absolute; 
+    min-width: 100%;
+    min-height: 100%;
+  
+}
+.header-logo {
+    width: 200px;
+    height: 38px;
+    background: url(images/logo_headphones.png);
+    background-size: cover;
+    position: absolute;
+    left: 230px;
+    top: 30px;
+}
+.header-links {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 60%;
+    margin-right: 4%;
+    color: var(--color-white);
+
+}
+
+li{
+    margin: 23px 0;
+}
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: Source Sans Pro;
+    font-weight: bold;
+
+}
+.links:hover {
+    color: #FF6565;;
+}
+.hero-text {
+    position: absolute;
+    left: 4.55%;
+    right: 4.71%;
+    top: calc(65% - 40px/2 - 136.5px);
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--color-white);
+}
+.mybtn {
+	background-color: #FF6565;;
+	border-radius:28px;
+	border:1px solid var(--color-primary);
+	display:inline-block;
+	cursor:pointer;
+    color:var(--color-white);
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    padding:14px 31px;
+    margin-top: 25px;
+}
+.mybtn:hover {
+	background-color:#eb5353;;
+}
+
+[id=scnd] {
+    position: absolute;
+    left: 28%;
+    height: 104px;
+    right: 28%;
+    top: calc(85% - 104px/2 + 104.5px);
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.header ul {
+    list-style: none;
+    overflow: hidden;
+  }
+
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .header .menu-icon .navicon {
+    background: var(--color-white);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 23px;
+    top: 30px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: var(--color-white);
+    content: '';
+    display: block;
+    height: 120%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+    width: 13px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: 10px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0px;
+    width: 20px;
+  }
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+
+      .header .menu-icon {
+        display: none;
+      }
+      .header-logo {
+        left: 10%;
+    }
+    .pentagone {
+      margin-top: 450px;
+
+    }
+    
+    
+  }
+
+@media only screen and (max-width: 1150px) {
+  [id=scnd] {
+    left: 20%;
+    right: 20%;
+    }
+    
+    .links {
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+    [id=scnd] {
+      white-space: pre-line;
+    }
+    .what_we_do h1 {
+      margin-top: -150px;
+      white-space:nowrap;
+    }
+    .what_we_do .icons {
+      display: grid;
+      grid-template-rows:    300px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .icons {
+      margin-top: 150px;
+    }
+    .our_results .pentagone  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap:50px;
+
+    }
+    #res {
+      white-space: nowrap;
+      margin-left: -11%;
+    }
+    #resp {
+      margin-left: -15%;
+      width: 75%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    [id=scnd] {
+        left: 6%;
+        right: 6%;
+    }
+    .header-logo {
+        left: 30%;
+    }
+    h1 {
+        line-height: 1;
+    }
+    .header .menu-icon {
+        left: 10%;
+    }
+    .header-links  {
+        display: table;
+        margin: 8% 35%;
+        line-height: 3rem;
+    }
+    input[type=checkbox]:not(:checked) ~ label ~ .menu { 
+      display: none;
+    }
+    .what_we_do .icons{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .pentagone #res {
+      white-space: normal;
+      text-align: center;
+      top: -25px;
+       }
+    .pentagone #resp {
+      text-align: center;
+      width: 100%;
+      top: 95px;
+      left: 15%;
+    }
+    .our_results .pentagone{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 50%;
+    }
+    .contact_us {
+      margin-top: 60%;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+  }
+  footer .hlogo {
+    top: 10px;
+  }
+
+
+
+}
+main {
+  padding: 800px 0px;
+}
+main h1 {
+  position: absolute;
+left: 35.16%;
+right: 35.01%;
+
+font-family: Source Sans Pro;
+font-size: 30px;
+line-height: 7px;
+text-align: center;
+color: #071629;
+}
+.what_we_do  > p {
+  position: absolute;
+height: 104px;
+top: calc(121% - 104px/2 + 40px);
+font-family: Source Sans Pro;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #071629;
+left: 26%;
+right: 26%;
+}
+section .icons  {
+  display: flex;
+  justify-content: center;
+  padding: 250px;
+  font-family: Source Sans Pro;
+}
+.icons span {
+  font-size: 90px;
+  margin: 110px;
+  color:#FF6565;
+
+}
+
+.icons h3 {
+  font-size: 16px;
+  padding-left: 108px;
+}
+
+.icons p {
+  margin-left: 65px;
+  margin-right: 55px;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* our results section */
+
+.our_results {
+  margin-top: -8%;
+  background-image: url(images/headphones_hero_2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  justify-content: center;
+}
+#res {
+position: absolute;
+height: 40px;
+left: 34.07%;
+right: 33.93%;
+top: calc(50% - 40px/2 - 164px);
+font-family: Source Sans Pro;
+font-size: 32px;
+line-height: 37px;
+text-align: center;
+color:var(--color-white);
+}
+#resp {
+  position: absolute;
+height: 104px;
+left: 27.29%;
+right: 27.21%;
+top: calc(50% - 104px/2 - 52px);
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+
+text-align: center;
+
+color: var(--color-white);
+}
+.pntg {
+  background-image: url(images/pentagone.png);
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  width: 190px;
+   display: inline-grid;
+   left: 15%;
+   margin-left: 4%;
+   position: relative;
+   color: var(--color-white);
+
+
+}
+.pentagone .pntg h3{
+  font-size: 50px;
+  font-family: Source Sans Pro;
+  text-align: center;
+  
+}
+.pentagone .pntg p {
+  margin-top: -30px;
+  font-family: Source Sans Pro;
+    text-align: center;
+}
+
+
+section .contact_us {
+  position: relative;
+  font-family: Source Sans Pro;
+  bottom: -950px;
+
+}
+
+section .contact_us h3 {
+  position: absolute;
+  height: 40px;
+  left: 25.06%;
+  right: 28.36%;
+  top: calc(43% - 40px/2 - 166.5px);
+  font-size: 32px;
+  text-align: center;
+  color: #071629;
+}
+
+section .contact_us input[type=text] {
+  width: 150%;
+  padding: 12px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  outline: none;
+  margin-bottom: 40px;
+
+}
+
+section .contact_us .container {
+  display: block;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  right: 40%;
+  transform: translate(-30%, -40%);
+
+}
+section .contact_us ::placeholder {
+    font-weight: bold;
+    color: #071629;
+}
+
+.sbtn a {
+	background-color: #FF6565;;
+	border-radius:28px;
+	border:1px solid var(--color-primary);
+	display:inline-block;
+	cursor:pointer;
+    color:var(--color-white);
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    padding:14px 31px;
+    margin-top: 25px;
+      display: block;
+      position: absolute;
+      top: 60%;
+      transform: translate(75%, 110%);
+      white-space: nowrap;
+      text-align: center;
+  }
+
+  footer {
+    background-color: #071629;
+    padding: 5rem;
+    position: relative;
+    bottom: -80rem;
+  }
+  footer .social {
+    float: right;
+    font-size: 25px;
+  }
+  #txt {
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    bottom: -60px;
+  }
+  footer .hlogo{
+    background-image: url(images/logo_headphones.png);
+    background-size: cover;
+    position: absolute;
+    width: 120px;
+    padding: 14px;
+
+  }
